@@ -5,7 +5,7 @@ Este repositório contém materiais, exemplos e boas práticas para otimizar apl
 ## 📌 Tópicos Abordados  
 
 - 🔹 **Otimização de renderizações**: `useMemo`, `useCallback`, `React.memo`  
-- 🔹 **Gerenciamento eficiente de estado**: `useState` vs. `useReducer`, Redux  
+- 🔹 **Gerenciamento eficiente de estado**: `useState` vs. `useReducer`
 - 🔹 **Code-Splitting e Lazy Loading**: `React.lazy`, `Suspense`, `loading="lazy"`, `next/image`  
 - 🔹 **Melhoria na organização do código**: Custom Hooks, Estrutura de pastas
 
