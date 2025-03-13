@@ -7,8 +7,7 @@ Este repositório contém materiais, exemplos e boas práticas para otimizar apl
 - 🔹 **Otimização de renderizações**: `useMemo`, `useCallback`, `React.memo`  
 - 🔹 **Gerenciamento eficiente de estado**: `useState` vs. `useReducer`, Redux  
 - 🔹 **Code-Splitting e Lazy Loading**: `React.lazy`, `Suspense`, `loading="lazy"`, `next/image`  
-- 🔹 **Melhoria na organização do código**: Custom Hooks, Componentização, Clean Code  
-- 🔹 **Métricas de Performance**: Lighthouse, Web Vitals, React Profiler  
+- 🔹 **Melhoria na organização do código**: Custom Hooks, Estrutura de pastas
 
 ## 🛠️ Como Usar  
 
@@ -26,5 +25,5 @@ Este repositório contém materiais, exemplos e boas práticas para otimizar apl
    ```
 4. Execute os exemplos:
    ```sh
-  npm run dev
+   npm run dev
    ```
