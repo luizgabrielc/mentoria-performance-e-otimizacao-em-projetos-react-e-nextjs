@@ -15,10 +15,16 @@ Este repositório contém materiais, exemplos e boas práticas para otimizar apl
 1. Clone o repositório:  
    ```sh
    git clone https://github.com/seu-usuario/mentoria-performance-e-otimização-em-projetos-react-e-nextjs.git
-   Acesse a pasta:
+   ```
+2. Acesse a pasta: 
+   ```sh
    cd mentoria-performance-e-otimização-em-projetos-react-e-nextjs
-   Instale as dependências (se aplicável):
+   ```
+3. Instale as dependências (se aplicável):
+   ```sh
    npm install
-   Execute os exemplos:
-   npm run dev
-    ```
+   ```
+4. Execute os exemplos:
+   ```sh
+  npm run dev
+   ```
