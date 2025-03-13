@@ -19,7 +19,7 @@ Este repositório contém materiais, exemplos e boas práticas para otimizar apl
    ```sh
    cd mentoria-performance-e-otimização-em-projetos-react-e-nextjs
    ```
-3. Instale as dependências (se aplicável):
+3. Instale as dependências:
    ```sh
    npm install
    ```
