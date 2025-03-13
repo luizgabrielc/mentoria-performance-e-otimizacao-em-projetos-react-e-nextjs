@@ -13,7 +13,7 @@ Este repositório contém materiais, exemplos e boas práticas para otimizar apl
 
 1. Clone o repositório:  
    ```sh
-   git clone https://github.com/seu-usuario/mentoria-performance-e-otimização-em-projetos-react-e-nextjs.git
+   https://github.com/luizgabrielc/mentoria-performance-e-otimiza-o-em-projetos-react-e-nextjs.git
    ```
 2. Acesse a pasta: 
    ```sh
