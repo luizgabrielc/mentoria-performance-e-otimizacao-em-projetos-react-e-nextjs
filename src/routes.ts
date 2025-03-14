@@ -32,7 +32,7 @@ export const routes: RouteConfig[] = [
     ],
   },
   {
-    label: "Optimization Example 1",
+    label: "Optimization",
     path: "/optimization",
     subRoutes: [
       {
@@ -43,14 +43,6 @@ export const routes: RouteConfig[] = [
           { label: "Without Code Splitting", path: "/WithoutCodeSplitting" },
         ],
       },
-      // {
-      //   label: "Example 2",
-      //   path: "/example2",
-      //   subRoutes: [
-      //     { label: "Correct", path: "/correct" },
-      //     { label: "Wrong", path: "/wrong" },
-      //   ],
-      // },
     ],
   },
   {

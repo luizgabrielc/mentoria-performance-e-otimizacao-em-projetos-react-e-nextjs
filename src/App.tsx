@@ -12,21 +12,26 @@ import StatesExample1Correct from "./pages/states/example1/Correct";
 import StatesExample1Wrong from "./pages/states/example1/Wrong";
 import StatesExample2Correct from "./pages/states/example2/Correct";
 import StatesExample2Wrong from "./pages/states/example2/Wrong";
+import Home from "./pages/home/Home";
 
 const App = () => {
   return (
     <Router>
-      <div className="flex items-center justify-between px-8 py-2">
+      <div className="flex items-center justify-between px-8 py-2 h-1/12">
         <Link
-          className="border shadow rounded-lg py-1 px-2 font-semibold"
+          className="border shadow rounded-lg py-1 px-2 font-semibold text-white"
           to="/"
         >
           MENTORIA FRONT-END
         </Link>
         <Navbar />
       </div>
-      <div className="px-8 mt-20 flex items-center justify-center">
+      <div className="px-8 flex items-center justify-center h-11/12">
         <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
           <Route
             path="/avoiding-rerenders/correct"
             element={<AvoidingReRendersCorrect />}
