@@ -11,17 +11,34 @@ const UsingUseMemo = () => {
   }, [count1]);
 
   return (
-    <div
-      className="w-full flex flex-col gap-y-2
-      items-center justify-center"
-    >
-      <Button onClick={() => setCount1(count1 + 1)}>Incrementar count1</Button>
-      <Button variant="outline" onClick={() => setCount2(count2 + 1)}>
+    <div className="grid gap-y-2">
+      <h1 className="text-center text-neutral-300 text-4xl">useMemo - Exemplo correto</h1>
+      <Button
+        onClick={() => setCount1(count1 + 1)}
+      >
+        Incrementar count1
+      </Button>
+      <p
+        className="text-center text-neutral-300"
+      >
+        Resultado count1: {count1}
+      </p>
+      <Button
+        variant="outline"
+        onClick={() => setCount2(count2 + 1)}
+      >
         Incrementar count2
       </Button>
-      <p>Resultado count1: {count1}</p>
-      <p>Resultado count2: {count2}</p>
-      <p>Resultado memoizedValue: {memoizedValue}</p>
+      <p
+        className="text-center text-neutral-300"
+      >
+        Resultado count2: {count2}
+      </p>
+      <p
+        className="text-center text-neutral-300"
+      >
+        Resultado memoizedValue: {memoizedValue}
+      </p>
     </div>
   );
 };

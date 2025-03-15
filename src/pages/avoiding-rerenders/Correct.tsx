@@ -3,19 +3,23 @@ import { useState, memo } from "react";
 
 const Child = memo(() => {
   console.log("Child renderizou!");
-  return <p>Sou um componente filho!</p>;
+  return <p
+    className="text-center text-red-500 border border-red-500 p-2 rounded"
+  >Sou um componente filho!</p>;
 });
 
 const AvoidReRender = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
-    <div
-      className="w-full flex flex-col gap-y-2
-      items-center justify-center"
-    >
+    <div className="grid gap-y-2">
+      <h1 className="text-center text-neutral-300 text-4xl">Evitando re-renders - Exemplo correto</h1>
       <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
-      <p>Contador: {count}</p>
+      <p
+        className="text-center text-neutral-300"
+      >
+        Contador: {count}
+      </p>
       <Child />
     </div>
   );

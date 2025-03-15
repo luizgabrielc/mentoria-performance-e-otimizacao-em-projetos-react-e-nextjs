@@ -1,28 +1,48 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
-type Props = { onClick: VoidFunction };
-
-const ButtonComponent = ({ onClick }:Props) => {
-  console.log("Renderizou Button");
-  return <Button onClick={onClick}>Clique Aqui</Button>;
-};
-
 const NotUsingUseCallback = () => {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState(0);
+  const [otherState, setOtherState] = useState(false);
 
-  // Essa função é recriada toda vez que 
-  // o componente NotUsingUseCallback renderiza
-  const increment = () => {
-    setCount((prev) => prev + 1);
+  const handleClick = () => {
+    console.log("Função handleClick foi acionada!"); //recriada, não executada!
   };
 
   return (
-    <div>
-      <p>Contagem: {count}</p>
-      <ButtonComponent onClick={increment} />
+    <div className="grid gap-y-2">
+      <h1
+        className="text-center text-neutral-300 text-4xl"
+      >
+        useCallback - Exemplo incorreto
+      </h1>
+      <Button
+        onClick={() => setCount(count + 1)}
+      >
+        Incrementar Count
+      </Button>
+      <p
+        className="text-center text-neutral-300"
+      >
+        Count: {count}
+      </p>
+      <Button
+        onClick={() => setOtherState(!otherState)}
+      >
+        Alterar OtherState
+      </Button>
+      <p
+        className="text-center text-neutral-300"
+      >
+        OtherState: {String(otherState)}
+      </p>
+      <Button
+        onClick={handleClick}
+      >
+        Executar função
+      </Button>
     </div>
   );
-};
+}
 
-export default NotUsingUseCallback;
+export default NotUsingUseCallback

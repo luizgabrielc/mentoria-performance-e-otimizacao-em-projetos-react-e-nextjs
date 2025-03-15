@@ -1,28 +1,48 @@
 import { Button } from "@/components/ui/button";
 import { useState, useCallback } from "react";
 
-type Props = { onClick: VoidFunction };
-
-const ButtonComponent = ({ onClick }:Props) => {
-  console.log("Renderizou Button");
-  return <Button onClick={onClick}>Clique Aqui</Button>;
-};
-
 const UsingUseCallback = () => {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState(0);
+  const [otherState, setOtherState] = useState(false);
 
-  // `increment` agora é memoizado e 
-  // só será recriado se `setCount` mudar
-  const increment = useCallback(() => {
-    setCount((prev) => prev + 1);
-  }, []);
+  const handleClick = useCallback(() => {
+    console.log("Função handleClick foi acionada!"); //recriada, não executada!
+  }, [count]); // Só será recriada quando `count` mudar
 
   return (
-    <div>
-      <p>Contagem: {count}</p>
-      <ButtonComponent onClick={increment} />
+    <div className="grid gap-y-2">
+      <h1
+        className="text-center text-neutral-300 text-4xl"
+      >
+        useCallback - Exemplo correto
+      </h1>
+      <Button
+        onClick={() => setCount(count + 1)}
+      >
+        Incrementar Count
+      </Button>
+      <h2
+        className="text-center text-neutral-300"
+      >
+        Count: {count}
+      </h2>
+      <Button
+        onClick={() => setOtherState(!otherState)}
+      >
+        Alterar OtherState
+      </Button>
+      <h2
+        className="text-center text-neutral-300"
+      >
+        OtherState: {String(otherState)}
+      </h2>
+      <Button
+        onClick={handleClick}
+      >
+        Executar função
+      </Button>
     </div>
   );
-};
+}
 
-export default UsingUseCallback;
+export default UsingUseCallback

@@ -15,8 +15,17 @@ const NotUsingUseMemo = () => {
       className="w-full flex flex-col gap-y-2
       items-center justify-center"
     >
-      <Button onClick={() => setCount1(count1 + 1)}>Incrementar count1</Button>
-      <Button variant="outline" onClick={() => setCount2(count2 + 1)}>Incrementar count2</Button>
+      <Button
+        onClick={() => setCount1(count1 + 1)}
+      >
+        Incrementar count1
+      </Button>
+      <Button
+        variant="outline"
+        onClick={() => setCount2(count2 + 1)}
+      >
+        Incrementar count2
+      </Button>
       <p>Resultado count1: {count1}</p>
       <p>Resultado count2: {count2}</p>
       <p>Resultado heavyCalculation: {heavyCalculation()}</p>

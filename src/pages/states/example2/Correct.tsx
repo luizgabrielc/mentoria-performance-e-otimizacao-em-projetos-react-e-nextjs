@@ -18,6 +18,7 @@ const GoodUserForm = () => {
 
   return (
     <form className="grid gap-4">
+      <h1 className="text-center text-neutral-300 text-4xl">States - Exemplo 2 correto</h1>
       <div className="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="email">Email</Label>
         <Input
